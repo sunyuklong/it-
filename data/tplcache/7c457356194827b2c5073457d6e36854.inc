@@ -1,0 +1,1 @@
+<item data="[field:arcurl/]" target="_blank"> <img src='[field:flash/]' width="250" height="320" > <span>[field:title/]</span> </item>

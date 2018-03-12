@@ -1,0 +1,1 @@
+<li><span>[field:global runphp='yes' name=autoindex] $b="0";if(@me<=9) @me = $b.@me;if (@me >= 10) @me = @me; [/field:global]</span><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:title/]</a></li>

@@ -1,0 +1,2 @@
+<li> <a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]" width="58" height="58" /></a>              <h2 class="focus-title"><a href="[field:arcurl/]" target="_blank" title="[field:fulltitle/]">[field:title/]</a></h2>              <p>[field:description function="cn_substr(@me,110)"/]</p>            
+  </li>

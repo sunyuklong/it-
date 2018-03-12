@@ -1,0 +1,524 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<title>_云站 YunZhan123.com</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="MobileOptimized" content="240"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link href="/dedemao/css/stylev2.1.css" rel="stylesheet" type="text/css">
+<link href="/dedemao/css/block.css" rel="stylesheet" type="text/css" />
+<script src="/dedemao/js/ua.js" type="text/javascript"></script>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="/dedemao/js/v2/jquery-cookie.js"></script>
+<script type="text/javascript" src="/dedemao/js/7hot.js"></script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body class="single win8">
+<div id="hd">   
+<!-- 导航区域 -->  
+<div id="nav">   
+<a href="/" title="云站 YunZhan123.com" class="logo"><img src="/dedemao/images/logo.png" alt="云站 YunZhan123.com" width="140" height="28" /></a>    <!-- 主导航 -->  
+
+      <ul class="nav_list">      <li><a href="/" class="nav-item nav-item-2">首页</a></li> </ul>         
+      
+<div class="tb-item dm">
+<a href="/plus/list.php?tid=1" class="  
+item-link item-link-2
+">Win8之家</a>
+<div id="dy" class="menu feed"><ul class="mn_con">
+
+<li><a href="/plus/list.php?tid=10">Win8快讯</a></li>
+
+<li><a href="/plus/list.php?tid=11">Win8学院</a></li>
+
+<li><a href="/plus/list.php?tid=12">Win8系统下载</a></li>
+
+<li><a href="/plus/list.php?tid=13">Win8软件下载</a></li>
+
+<li><a href="/plus/list.php?tid=14">Win8主题</a></li>
+
+</ul></div>
+ </div><div class="tb-item dm">
+<a href="/plus/list.php?tid=2" class="  
+item-link item-link-2
+">资讯</a>
+<div id="dy" class="menu feed"><ul class="mn_con">
+
+<li><a href="/plus/list.php?tid=15">IT资讯</a></li>
+
+<li><a href="/plus/list.php?tid=16">QQ之家</a></li>
+
+<li><a href="/plus/list.php?tid=17">IT之外</a></li>
+
+</ul></div>
+ </div><div class="tb-item dm">
+<a href="/plus/list.php?tid=5" class="  
+nav-item nav-item-2
+">苹果之家</a>
+
+
+
+ </div><div class="tb-item dm">
+<a href="/plus/list.php?tid=6" class="  
+nav-item nav-item-2
+">谷歌之家</a>
+
+
+
+ </div><div class="tb-item dm">
+<a href="/plus/list.php?tid=7" class="current  
+nav-item nav-item-2
+">壁纸之家</a>
+
+
+
+ </div>
+
+
+
+
+    <!-- an End --> <div class="tb-nav">         <div class="tb-item">                <!-- 搜索 -->                <div class="sc">                  
+      <form  name="formsearch" action="/plus/search.php">    
+      <input type="hidden" name="kwtype" value="0" />                  
+    <input id="searchTextbox" class="focus" size="24" name="q" />                    
+    <button type="submit" name="sa">搜索</button>                  
+    </form>                  
+    <div class="extra_sc">                        精准搜索请尝试：<a href="/plus/heightsearch.php" target="_blank" class="js" title="精确搜索">精确搜索</a>                  
+    </div>                
+    </div>            
+    </div>                                <div class="tb-item"><a href="javascript:;" class="item-link item-link-5">阅读设置</a></div>      </div>      <!-- tb-nav End -->   </div>
+</div>
+<div class="view view_setting">
+<div class="set_con">    <p class="c_st"><span class="set_op">内容字号：</span><a href="javascript:;" id="fs1">默认</a><span class="v"></span><a href="javascript:;" id="fs2">大号</a><span class="v"></span><a href="javascript:;" id="fs3">超大号</a></p>    <p class="c_st"><span class="set_op">段落设置：</span><a href="javascript:;" id="indt">段首缩进</a><a href="javascript:;" id="noindt" class="hide">取消段首缩进</a></p>    <p class="g_st"><span class="set_op">字体设置：</span><a href="javascript:;" id="yahei">切换到微软雅黑</a><a href="javascript:;" id="song" class="hide">切换到宋体</a></p>    </div></div>
+<script src="/dedemao/js/v2/global_set.js"></script>
+<div id="con">             <div class="bx-recom bx-recom-single">
+<!-- 头条 -->
+<div class="hl_wrap clearfix">
+<div class="hl-960" id="hl960">
+<!-- 全站顶部广告位 -->
+<a href=#><img src=/dedemao/ad/top.png /></a>
+</div>
+</div>
+  
+<div id="wrapper">    <div class="content fl">      <div class="current_nav"><a href='http://c0001-blue.mysitecdn.com/'>主页</a> > <a href='/plus/list.php?tid=7'>壁纸之家</a> >  </div>      <div class="post_title">        <h1></h1>        <span class="pt_info pre1">1970-01-01 08:00　出处：　<span id="hitcount">人气：<script src="/plus/count.php?view=yes&aid=516&mid=" type='text/javascript' language="javascript"></script></span>　<a href="#commentDiv" class="pti_comm">评论（<span id="commentnum">0</span>）</a></span> </div>      <div class="con-recom">
+<!-- 文章内容页广告位1 -->
+<a href=#><img src=/dedemao/ad/article_ad1.jpg /></a>
+	  </div>            <div class="post_content" id="paragraph">            <script src="/dedemao/js/v2/content_set.js"></script>            <p class="content_copyright"><a class="s_tag" href="http://c0001-blue.mysitecdn.com" target="_blank">云站 YunZhan123.com</a>（<a class="s_tag" href="http://c0001-blue.mysitecdn.com" target="_blank">http://c0001-blue.mysitecdn.com</a>）：</p>
+
+      </div>      <div class="con-recom">        <div class="bx-recom4"></div>        <div class="bx-recom4">
+<!-- 文章内容页广告位2 -->
+<a href=#><img src=/dedemao/ad/article_ad2.jpg /></a>
+      </div>      </div>      <div class="shareto"> <span>分享给小伙伴们：</span>             
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>     
+      </div>      <div class="hot_tags"> <span>本文标签：
+
+
+</div>         
+<!-- 相关文章 -->        
+<div class="related_post"><h2>相关文章</h2>
+<ul class="list_1">
+<li><a target="_blank" href="/plus/view.php?aid=462" title="2013年6月微软必应桌面壁纸合集下载（60P）">2013年6月微软必应桌面壁纸合集下载（60P）</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=460" title="谷歌 Nexus 7 二代平板/安卓4.3 壁纸下载合集">谷歌 Nexus 7 二代平板/安卓4.3 壁纸下载合集</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=459" title="IT之家桌面壁纸下载精选：风景美如画 - Lost One">IT之家桌面壁纸下载精选：风景美如画 - Lost One</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=458" title="IT之家桌面壁纸下载精选：微软 Xbox One 特辑">IT之家桌面壁纸下载精选：微软 Xbox One 特辑</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=457" title="2013年7月微软必应Bing桌面壁纸下载（62P）">2013年7月微软必应Bing桌面壁纸下载（62P）</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=456" title="摩托罗拉 Moto X 内置壁纸下载（16P）">摩托罗拉 Moto X 内置壁纸下载（16P）</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=455" title="IT之家桌面壁纸下载精选：八月时光记">IT之家桌面壁纸下载精选：八月时光记</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=454" title="Win8.1 RTM Build 9600 正式版默认壁纸下载">Win8.1 RTM Build 9600 正式版默认壁纸下载</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=453" title="Win8.1 RTM 正式版20张内置壁纸打包下载">Win8.1 RTM 正式版20张内置壁纸打包下载</a><span class="date">01.28</li>
+<li><a target="_blank" href="/plus/view.php?aid=452" title="2013年8月微软必应桌面壁纸下载：这次有群羊驼">2013年8月微软必应桌面壁纸下载：这次有群羊驼</a><span class="date">01.28</li>
+ 
+	</ul>
+
+</div>             
+
+
+ 
+<div id="commentDiv">
+
+
+<title>
+	评论
+</title><meta content="width=device-width" name="viewport">
+<div id="post_comm" class="post_comment">
+    <h3 id="post_comment">发表评论<span>愿您的每句评论，都能给大家的生活添色彩，带来共鸣，带来思索，带来快乐。</span></h3>
+    
+<form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="516" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+<input type="hidden" name="feedbacktype" value="feedback" />
+			<input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+                      
+        <div class="add_comm">
+        <textarea onfocus="this.value=''; this.onfocus=null;" class="ipt-txt" rows="5" cols="60" id="msg" name="msg">有您参与更精彩！</textarea><p></p>
+        
+        <div class="comm-con"><span>签名：</span><input type="text" onblur="if(this.value=='')this.value='匿名';" onfocus="if(this.value=='匿名')this.value='';" value="匿名" class="ipt-txt" size="36" id="commentNick" name="username">
+<span>验证码：</span>
+              <input type="text" name="validate" size="4" maxlength="4" class="ipt-txt" style="text-transform:uppercase;width:100px;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>        
+        </div>
+ 
+        <input onClick='PostComment()' type="button" class="button" id="btnComment" value="发表评论" name="btnComment">
+        <span id="commentMessage"></span>
+    </div>
+</form>    
+    <div id="commentlist" class="comm_list">
+    <h3><span class="icon2"></span>评论列表</h3>
+    <ul id="ulcommentlist" class="list"> 
+        
+    <dd id='commetcontent'></dd>
+    <a name="newcomment"></a>
+    <dd id='commetcontentNew'></dd>
+    </ul><ul id="LoadArticleReply" class="list"></ul></div>
+</div>
+<script type="text/javascript" src="/dedemao/js/comment.js"></script>
+</div>    
+
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=516&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		 
+		var f = document.feedback;
+		
+		var msg = document.getElementById("msg").value;
+		
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		location.href="#newcomment";
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		document.getElementById("msg").value= '';
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '516');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		document.getElementById("msg").setData('');
+		document.getElementById("msg").value = "";
+		
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = document.getElementById("msg_'+fid+'").value');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'utf-8';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '516');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+</div>    <!-- content End -->        
+<!-- 侧边区域 -->
+<div class="sidebar">      <ul>        
+ 
+
+           
+        <li class="sb_list">        
+<div class="bx">
+<!-- 右侧广告位1 -->
+<a href=#><img src=/dedemao/ad/right1.jpg /></a>
+</div>        
+</li>        <li class="sb_list">
+<div class="right_con post_right_con">     <div class="hotnews_list">        <div class="hidden_line"></div>        <div class="hn_title">本类最热新闻</div>        <ul class="ulcl">
+      <li class="list_pic"><a href="/plus/view.php?aid=450" target="_blank" class="hn_img"><img src="/uploads/allimg/140128/406.jpg" /></a><a title="必应秀美" target="_blank" href="/plus/view.php?aid=450" class="list_title">必应秀美</a>      </li>
+<li class="list_pic"><a href="/plus/view.php?aid=460" target="_blank" class="hn_img"><img src="/uploads/allimg/140128/417.jpg" /></a><a title="谷歌 Nexus 7 二代平板/安卓4.3 壁纸下载合集" target="_blank" href="/plus/view.php?aid=460" class="list_title">谷歌 Nexus 7 二代平板/安卓</a>      </li>
+
+      <li class="hn_li"><a title="2013年6月微软必应桌面壁纸合集下载（60P）" target="_blank" href="/plus/view.php?aid=462">&bull; 2013年6月微软必应桌面壁纸合集下载（60P）</a></li>
+<li class="hn_li"><a title="女玩家自制《魔兽世界》种族壁纸（图）" target="_blank" href="/plus/view.php?aid=423">&bull; 女玩家自制《魔兽世界》种族壁纸（图）</a></li>
+<li class="hn_li"><a title="Win7/Win8壁纸精选：火狐，随处可见" target="_blank" href="/plus/view.php?aid=424">&bull; Win7/Win8壁纸精选：火狐，随处可见</a></li>
+<li class="hn_li"><a title="苹果桌面壁纸再美化：席卷之浪（含手机壁纸）" target="_blank" href="/plus/view.php?aid=425">&bull; 苹果桌面壁纸再美化：席卷之浪（含手机壁纸）</a></li>
+<li class="hn_li"><a title="Win7/Win8壁纸下载精选：绚丽多姿的彩蝶" target="_blank" href="/plus/view.php?aid=426">&bull; Win7/Win8壁纸下载精选：绚丽多姿的彩蝶</a></li>
+<li class="hn_li"><a title="Win7/Win8圣诞节壁纸精选：铃儿响叮当" target="_blank" href="/plus/view.php?aid=427">&bull; Win7/Win8圣诞节壁纸精选：铃儿响叮当</a></li>
+<li class="hn_li"><a title="IT之家桌面壁纸下载精选：秋韵、红叶" target="_blank" href="/plus/view.php?aid=428">&bull; IT之家桌面壁纸下载精选：秋韵、红叶</a></li>
+<li class="hn_li"><a title="iPhone壁纸精选：生机盎然的绿野" target="_blank" href="/plus/view.php?aid=429">&bull; iPhone壁纸精选：生机盎然的绿野</a></li>
+<li class="hn_li"><a title="Win7/Win8壁纸精选：Happy New Year" target="_blank" href="/plus/view.php?aid=430">&bull; Win7/Win8壁纸精选：Happy New Year</a></li>
+<li class="hn_li"><a title="IT之家桌面壁纸：触摸的质感，感受得到的细腻" target="_blank" href="/plus/view.php?aid=431">&bull; IT之家桌面壁纸：触摸的质感，感受得到的细腻</a></li>
+     
+      </ul>    </div></div>      
+      </li>        <li class="sb_list">        
+      <div class="bx">
+<!-- 右侧广告位2 -->
+<a href=#><img src=/dedemao/ad/right2.jpg /></a>
+      </div>        </li>        <li class="sb_list">
+<div class="right_con post_right_con ">
+	<div class="top_news">
+      	<div class="bar">
+                <ul>
+                     <li id="must" class="current" onMouseMove="must()">48小时最热</li>
+                    <li id="hot7"  onmousemove="hot7()">7天最热</li>
+                    <li id="comm7" onMouseMove="comm7()" class="">7天热评</li>
+                    <li id="month" onMouseMove="month()" class="">月榜</li>
+
+                </ul>
+            </div>
+            <!-- 7天最热 -->
+            <div id="con1" class="list" style="display: none; ">
+            	<ul> 
+      
+
+                </ul>
+            </div>
+            
+            <!-- 7天热评 -->
+            <div id="con2" class="list" style="display: none; ">
+            	<ul>   
+ <li><span>01</span><a title="IT之家Build2014专题：Win8.1春更/WP8.1" target="_blank" href="/plus/view.php?aid=41">IT之家Build2014专题：Win8.1春更/WP8.1</a></li><li><span>02</span><a title="Win9：Win8到底还是重返Win7" target="_blank" href="/plus/view.php?aid=40">Win9：Win8到底还是重返Win7</a></li><li><span>03</span><a title="接连8天捡便宜，微软中国：新网站、新促销" target="_blank" href="/plus/view.php?aid=25">接连8天捡便宜，微软中国：新网站、新促销</a></li>                       
+                    
+                </ul>
+            </div>
+            
+            <!-- 月榜 -->
+            <div id="con3" class="list" style="display: none; ">
+            	<ul>
+                                                
+                </ul>
+            </div>
+            
+            <!-- 48小时最热 -->
+            <div id="con4" class="list" >
+            	<ul>
+                      
+
+
+                </ul>
+            </div>
+        </div>
+ </div>
+      
+</li>     </ul>      <ul id="crf1"><li class="sb_list">    <div class="bx" >
+<!-- 右侧悬浮广告位1 -->
+<a href=#><img src=/dedemao/ad/right3.jpg /></a>
+</div></li>          <li class="sb_list">        
+<div class="bx">
+<!-- 右侧悬浮广告位2 -->
+<a href=#><img src=/dedemao/ad/right4.jpg /></a>
+
+               </div>    </li>                        </ul>    </div>
+<!-- sidebar End -->
+  </div>  <!-- wrapper End -->   <div class="bx-recom">
+<!-- 内容页底部广告位 -->
+<a href=#><img src=/dedemao/ad/footer.jpg /></a>
+</div></div><div id="ft">   <!-- 链接 -->    
+<!-- 页脚 -->  
+<div class="if">    
+    <div class="bx1"> 
+        <a href="/about.html" target="_blank"><strong>关于我们</strong></a><span class="v">|</span>
+        <a href="/sitemap.html" target="_blank"><strong>网站地图</strong></a><span class="v">|</span>
+        <a href="/contact.html" target="_blank"><strong>联系我们</strong></a><span class="v">|</span>
+        <a href="/join.html" target="_blank"><strong>加入我们</strong></a><span class="v">|</span>
+        <a href="/tougao.html" target="_blank"><strong>投稿反馈</strong></a>
+    </div>    
+        <div class="bx2">
+        <p>Copyright &copy; 2002-2011 DEDECMS. 织梦科技 版权所有</p>      
+        <p>渝ICP备88888888号</p>    
+        </div>  
+    </div>
+</div>
+<script src="/dedemao/js/v2/common.js"></script> 
+<script src="/plus/pls.php?aid=516" language="javascript"></script>
+</body></html>

@@ -1,0 +1,1 @@
+<li> <a href="[field:arcurl/]"><img src="[field:litpic/]" width="36" height="36" /></a>            <p class="pro-name"><a href="[field:arcurl/]" target="_blank" title="[field:fulltitle/]">[field:title/]</a></p>            <p>发布时间：[field:pubdate function="MyDate('Y.m.d',@me)"/]</p>  </li>

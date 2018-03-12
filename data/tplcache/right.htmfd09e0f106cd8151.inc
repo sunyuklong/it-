@@ -1,0 +1,46 @@
+<?php
+$z[0]=Array("myad","",80,106);
+$z[0][4]=array();
+$z[0][4]['name']="right1";
+$z[1]=Array("arclist","\n      <li class=\"list_pic\"><a href=\"[field:arcurl/]\" target=\"_blank\" class=\"hn_img\"><img src=\"[field:litpic/]\" /></a><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\" class=\"list_title\">[field:title/]</a>      </li>            \n      ",350,659);
+$z[1][4]=array();
+$z[1][4]['limit']="0,2";
+$z[1][4]['orderby']="click";
+$z[2]=Array("arclist","\n   <li class=\"hn_li\"><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">&bull; [field:fulltitle/]</a></li>                 \n      ",666,871);
+$z[2][4]=array();
+$z[2][4]['limit']="2,10";
+$z[2][4]['orderby']="click";
+$z[3]=Array("myad","",1008,1034);
+$z[3][4]=array();
+$z[3][4]['name']="right2";
+$z[4]=Array("arclist","\n                    <li><span>[field:global runphp='yes' name=autoindex] \$b=\"0\";if(@me<=9) @me = \$b.@me;if (@me >= 10) @me = @me; [/field:global]</span><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:fulltitle/]</a></li>                          \n      ",1687,2052);
+$z[4][4]=array();
+$z[4][4]['typeid']="top";
+$z[4][4]['sort']="hot";
+$z[4][4]['subday']="7";
+$z[4][4]['titlelen']="42";
+$z[4][4]['row']="12";
+$z[5]=Array("php","\n\$dsql->SetQuery(\"select aid,arctitle from dede_feedback group by aid order by count(id) desc limit 12\");\n\$dsql->Execute();\n\$i=0;\nwhile(\$arr = \$dsql->getArray()){\n\$i++;\nif(\$i<9) \$i='0'.\$i;\n\$arcurl = GetOneArchive(\$arr['aid']);\n\necho '<li><span>'.\$i.'</span>';\necho '<a title=\"'.\$arr['arctitle'].'\" target=\"_blank\" href=\"'.\$arcurl['arcurl'].'\">'.\$arr['arctitle'].'</a></li>';\n}\n",2227,2625);
+$z[5][4]=array();
+$z[6]=Array("arclist","\n                    <li><span>[field:global runphp='yes' name=autoindex] \$b=\"0\";if(@me<=9) @me = \$b.@me;if (@me >= 10) @me = @me; [/field:global]</span><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:fulltitle/]</a></li>                          \n      ",2841,3207);
+$z[6][4]=array();
+$z[6][4]['typeid']="top";
+$z[6][4]['sort']="hot";
+$z[6][4]['subday']="30";
+$z[6][4]['titlelen']="42";
+$z[6][4]['row']="12";
+$z[7]=Array("arclist","\n                    <li><span>[field:global runphp='yes' name=autoindex] \$b=\"0\";if(@me<=9) @me = \$b.@me;if (@me >= 10) @me = @me; [/field:global]</span><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:fulltitle/]</a></li>                          \n      ",3422,3787);
+$z[7][4]=array();
+$z[7][4]['typeid']="top";
+$z[7][4]['sort']="hot";
+$z[7][4]['subday']="2";
+$z[7][4]['titlelen']="42";
+$z[7][4]['row']="12";
+$z[8]=Array("myad","",3970,3996);
+$z[8][4]=array();
+$z[8][4]['name']="right3";
+$z[9]=Array("myad","",4096,4122);
+$z[9][4]=array();
+$z[9][4]['name']="right4";
+
+?>

@@ -1,0 +1,1 @@
+<li class="hn_li"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">&bull; [field:fulltitle/]</a></li>
